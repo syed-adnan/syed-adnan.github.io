@@ -1,0 +1,70 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.12",
+    "version": "1.0.10",
+    "id": "a2d4d41a-c8fb-4e63-9936-5f9411a04a7c",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://syed-adnan.github.io/teamsVideoApp/index.html",
+        "privacyUrl": "https://syed-adnan.github.io/teamsVideoApp/index.htmll#/privacy",
+        "termsOfUseUrl": "https://syed-adnan.github.io/teamsVideoApp/index.html#/termsofuse"
+    },
+    "icons": {
+        "color": "resources/color.png",
+        "outline": "resources/outline.png"
+    },
+    "name": {
+        "short": "meetingFilterApp",
+        "full": "Meeting Filter App"
+    },
+    "description": {
+        "short": "Short description of meetingFilterApp",
+        "full": "Full description of meetingFilterApp"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "devicePermissions": [
+        "geolocation",
+        "media",
+        "notifications",
+        "midi",
+        "openExternal"
+    ],
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "CameraStream.Read.User",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "OutgoingVideoStream.Write.User",
+                    "type": "Delegated"
+                }
+            ]
+        }
+    },
+    "validDomains": [
+        "meetingdemdevbec81etab.z22.web.core.windows.net"
+    ],
+    "webApplicationInfo": {
+        "id": "734e6d41-3d78-46c9-96b2-4c41c87b705f",
+        "resource": "api://meetingdemdevbec81etab.z22.web.core.windows.net/734e6d41-3d78-46c9-96b2-4c41c87b705f"
+    },
+    "meetingExtensionDefinition": {
+        "filters": [
+            {
+                "id": "c4a3ccab-5030-4af9-9c6d-7e0cbab46501",
+                "name": "Invert Color",
+                "thumbnail": "resources/PreviewEffect.png"
+            }
+        ],
+        "videoAppContentUrl": "https://syed-adnan.github.io/teamsVideoApp/index.html"
+    }
+}
