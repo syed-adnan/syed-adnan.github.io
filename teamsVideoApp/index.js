@@ -1,7 +1,7 @@
-// microsoftTeams.initialize(() => {}, [
-//     "https://syed-adnan.github.io",
-//   ]);
-microsoftTeams.initialize(() => {});
+microsoftTeams.initialize(() => {}, [
+    "https://syed-adnan.github.io",
+  ]);
+// microsoftTeams.initialize(() => {});
   
   // This is the effect for processing
   let appliedEffect = {
@@ -52,21 +52,19 @@ microsoftTeams.initialize(() => {});
             ...appliedEffect,
             ...JSON.parse(effectName),
           };
-        } catch (e) {}
+        } catch (e) {
+            console.log(e);
+        }
       }
     }
   }
-
-  setTimeout(() => {
-      
+       
   microsoftTeams.appInitialization.notifySuccess();
   microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
   microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
     format: 0,
   });
-  }, 15000);
-  
-  
+
   // any changes to the UI should notify Teams client.
   document.getElementById("enable_check").addEventListener("change", function () {
     if (this.checked) {
