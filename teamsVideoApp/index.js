@@ -1,6 +1,7 @@
-microsoftTeams.initialize(() => {}, [
-    "https://syed-adnan.github.io",
-  ]);
+// microsoftTeams.initialize(() => {}, [
+//     "https://syed-adnan.github.io",
+//   ]);
+microsoftTeams.initialize(() => {});
   
   // This is the effect for processing
   let appliedEffect = {
