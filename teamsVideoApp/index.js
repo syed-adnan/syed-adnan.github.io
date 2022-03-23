@@ -1,4 +1,6 @@
 microsoftTeams.initialize(() => {}, [
+    "https://localhost:9000", 
+    "https://lubobill1990.github.io",
     "https://syed-adnan.github.io",
   ]);
 // microsoftTeams.initialize(() => {});
