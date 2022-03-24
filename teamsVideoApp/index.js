@@ -37,28 +37,28 @@ microsoftTeams.initialize(() => {}, [
   
   function effectParameterChanged(effectName) {
     console.log(effectName);
-    if (effectName === undefined) {
-      // If effectName is undefined, then apply the effect selected in the UI
-      appliedEffect = {
-        ...appliedEffect,
-        ...uiSelectedEffect,
-      };
-    } else {
-      if (effectName === "c4a3ccab-5030-4af9-9c6d-7e0cbab46502") {
-        appliedEffect.proportion = 2;
-        appliedEffect.pixelValue = 200;
-      } else {
-        // if effectName is string sent from Teams client, the apply the effectName
-        try {
-          appliedEffect = {
-            ...appliedEffect,
-            ...JSON.parse(effectName),
-          };
-        } catch (e) {
-            console.log(e);
-        }
-      }
-    }
+    // if (effectName === undefined) {
+    //   // If effectName is undefined, then apply the effect selected in the UI
+    //   appliedEffect = {
+    //     ...appliedEffect,
+    //     ...uiSelectedEffect,
+    //   };
+    // } else {
+    //   if (effectName === "c4a3ccab-5030-4af9-9c6d-7e0cbab46502") {
+    //     appliedEffect.proportion = 2;
+    //     appliedEffect.pixelValue = 200;
+    //   } else {
+    //     // if effectName is string sent from Teams client, the apply the effectName
+    //     try {
+    //       appliedEffect = {
+    //         ...appliedEffect,
+    //         ...JSON.parse(effectName),
+    //       };
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    //   }
+    // }
   }
        
   microsoftTeams.appInitialization.notifySuccess();
