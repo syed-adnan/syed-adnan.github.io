@@ -64,7 +64,7 @@ microsoftTeams.initialize(() => {}, [
   microsoftTeams.appInitialization.notifySuccess();
   microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
   microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
-    format: 0,
+    format: "NV12",
   });
 
   // any changes to the UI should notify Teams client.
