@@ -17,14 +17,14 @@ microsoftTeams.initialize(() => {}, [
   let errorOccurs = false;
   //Sample video effect
   function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
-    const maxLen =
-      (videoFrame.height * videoFrame.width) /
-        Math.max(1, appliedEffect.proportion) - 4;
+    // const maxLen =
+    //   (videoFrame.height * videoFrame.width) /
+    //     Math.max(1, appliedEffect.proportion) - 4;
   
-    for (let i = 1; i < maxLen; i += 4) {
-      //smaple effect just change the value to 100, which effect some pixel value of video frame
-      videoFrame.data[i + 1] = appliedEffect.pixelValue;
-    }
+    // for (let i = 1; i < maxLen; i += 4) {
+    //   //smaple effect just change the value to 100, which effect some pixel value of video frame
+    //   videoFrame.data[i + 1] = appliedEffect.pixelValue;
+    // }
   
     //send notification the effect processing is finshed.
     notifyVideoProcessed();
@@ -44,7 +44,7 @@ microsoftTeams.initialize(() => {}, [
         ...uiSelectedEffect,
       };
     } else {
-      if (effectName === "f36d7f68-7c71-41f5-8fd9-ebf0ae38f949") {
+      if (effectName === "c4a3ccab-5030-4af9-9c6d-7e0cbab46502") {
         appliedEffect.proportion = 2;
         appliedEffect.pixelValue = 200;
       } else {
