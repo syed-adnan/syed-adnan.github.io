@@ -60,13 +60,17 @@ microsoftTeams.initialize(() => {}, [
     //   }
     // }
   }
+
+  window.onload = () => {
+
+    microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
+    microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
+      format: "NV12"
+    });
+    microsoftTeams.appInitialization.notifySuccess();
+  }
        
 
-  microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
-  microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
-    format: "NV12",
-  });
-  microsoftTeams.appInitialization.notifySuccess();
   // any changes to the UI should notify Teams client.
   document.getElementById("enable_check").addEventListener("change", function () {
     if (this.checked) {
