@@ -66,9 +66,13 @@ window.onload = () => {
       ]);
       microsoftTeams.appInitialization.notifySuccess();
       microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
-  microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
-    format: "NV12",
-  });
+    
+      setTimeout(() => {
+        microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
+            format: "NV12",
+          });
+      }, 10000);
+      
   
 
   // any changes to the UI should notify Teams client.
