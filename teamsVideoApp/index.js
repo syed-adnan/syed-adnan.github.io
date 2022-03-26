@@ -70,7 +70,7 @@ window.onload = () => {
       ]);
       microsoftTeams.appInitialization.notifySuccess();
       microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
-      microsoftTeams.video.registerForPreviewStatus(Pt);
+      microsoftTeams.video.registerForPreviewStatus(previewStatus);
       setTimeout(() => {
         microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
             format: "NV12"
