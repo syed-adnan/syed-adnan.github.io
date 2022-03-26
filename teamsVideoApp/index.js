@@ -57,6 +57,10 @@ function effectParameterChanged(effectName) {
   // }
 }
 
+function previewStatus(arg) {
+    console.log("Preview signal", arg);
+}
+
 window.onload = () => {
     microsoftTeams.initialize(() => {}, [
         "https://localhost:9000",
@@ -66,10 +70,10 @@ window.onload = () => {
       ]);
       microsoftTeams.appInitialization.notifySuccess();
       microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
-    
+      microsoftTeams.video.registerForPreviewStatus(Pt);
       setTimeout(() => {
         microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
-            format: "NV12",
+            format: "NV12"
           });
       }, 10000);
       
