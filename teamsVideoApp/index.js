@@ -64,11 +64,12 @@ window.onload = () => {
         "https://syed-adnan.github.io",
         "https://teams.microsoft.com"
       ]);
-  microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
+      microsoftTeams.appInitialization.notifySuccess();
+      microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
   microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
     format: "NV12",
   });
-  microsoftTeams.appInitialization.notifySuccess();
+  
 
   // any changes to the UI should notify Teams client.
   document
