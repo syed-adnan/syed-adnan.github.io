@@ -69,9 +69,10 @@ window.onload = () => {
         "https://teams.microsoft.com"
       ]);
       microsoftTeams.appInitialization.notifySuccess();
-      microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
-      microsoftTeams.video.registerForPreviewStatus(previewStatus);
+     
       setTimeout(() => {
+        microsoftTeams.video.registerForVideoEffect(effectParameterChanged);
+        microsoftTeams.video.registerForPreviewStatus(previewStatus);
         microsoftTeams.video.registerForVideoFrame(videoFrameHandler, {
             format: "NV12"
           });
